@@ -129,6 +129,15 @@
             // Clear any local data
             message.value = '';
             error.value = '';
+            form.value = {
+              dog_id: '',
+              requested_time: '',
+              duration_minutes: '',
+              location: ''
+            };
+            walks.value = [];
+
+            // Redirect to login page (this will create a fresh session)
             window.location.href = '/';
           } catch (err) {
             error.value = err.message;
