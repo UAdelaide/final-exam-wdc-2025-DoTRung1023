@@ -72,6 +72,8 @@
       async mounted() {
         // Check if user is already logged in
         await this.checkLoginStatus();
+        await this.loadDogs();
+        await this.fetchNewDog();
       },
       methods: {
         async checkLoginStatus() {
