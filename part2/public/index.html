@@ -23,7 +23,8 @@
               <label for="password" class="form-label">Password</label><br>
               <input type="password" id="password" v-model="password" class="form-control" required/>
             </div>
-            <button type="submit" class="btn btn-primary" :disa>Login</button>
+            <button type="submit" class="btn btn-primary" :disabled="isLoading">
+              Login</button>
           </form>
       </div>
     </div>
