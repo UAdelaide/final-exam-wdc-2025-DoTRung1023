@@ -103,6 +103,26 @@
           loadWalkRequests();
         });
 
+        async function checkAuth() {
+          try {
+            const res = await fetch('/api/users/me');
+            if (!res.ok) {
+              // User not logged in
+              window.location.href = '/';
+              return;
+            }
+            const user = await res.json();
+            if(user.role !== 'owner') {
+              // User is logged in but not an wlaker - redirect to login page
+              window.location.href = '/';
+              return;
+            }
+          } catch(err) {
+            // Error checking auth - redirect to login page
+            window.location.href = '/';
+          }
+        }
+
         return {
           walks,
           message,
