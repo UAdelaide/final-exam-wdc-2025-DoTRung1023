@@ -87,7 +87,9 @@
               this.errorMessage = result.error || 'Login failed';
             }
           } catch(error) {
-            this.errorMessage = '';
+            this.errorMessage = 'Network error. Please try again.';
+          } finally {
+            this.isLoading = false;
           }
         }
       }
