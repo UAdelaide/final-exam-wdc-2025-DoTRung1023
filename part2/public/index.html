@@ -73,8 +73,14 @@
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify({
+                username: this.username,
+                password: this.password
               })
             });
+
+            if (response.ok) {
+              const data = await response.json();
+            }
           } catch(error) {
 
           }
