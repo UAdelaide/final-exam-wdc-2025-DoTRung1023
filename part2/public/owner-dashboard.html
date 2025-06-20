@@ -154,7 +154,7 @@
           try {
             const res = await fetch('/api/users/me');
             if (!res.ok) {
-              // N
+              // User not logged in 
             }
           } catch(err) {
             // Error checking auth - redirect to login page
