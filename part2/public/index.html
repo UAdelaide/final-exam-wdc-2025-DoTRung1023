@@ -43,9 +43,8 @@
           </thead>
           <tbody>
             <tr v-for="dog in dogs" :key="dog.dog_id">
-              <td>{{ (dog.dog_id
-                ) }}</td>
-              <td>{{ dog.name }}</td>
+              <td>{{ (dog.dog_id === 0) ? 'No Dog' : dog.dog_id }}</td>
+              <td>{{ (dog.name ===) }}</td>
               <td>{{ dog.size }}</td>
               <td>{{ dog.owner_id }}</td>
               <td><img :src="dog.photo" alt="Dog Photo" class="dog-photo"></td>
