@@ -38,7 +38,10 @@
           username: '',
           password: '',
           currentUser: null,
-          isLoggedIn: false
+          isLoggedIn: false,
+          isLoading: false,
+          errorMessage: '',
+          successMessage: ''
         };
       },
       async mounted() {
@@ -61,7 +64,7 @@
         },
         async login() {
           try{
-            
+
           } catch(error) {
 
           }
