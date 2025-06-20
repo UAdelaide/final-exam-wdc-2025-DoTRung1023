@@ -4,7 +4,8 @@ createApp({
     data() {
         return{
             dogImage: '',
-            
+            dogName: '',
+            dogBreed: '',
         }
     },
     mounted(){
