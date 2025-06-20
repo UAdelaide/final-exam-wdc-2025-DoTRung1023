@@ -145,12 +145,12 @@
             this.errorMessage = 'Failed to load dogs';
           }
         },
-        async fetchNewDog(){
+        async fetchDogImages(){
             try {
               for(let i = 0; i<this.dogs.length; i++){
                 const response = await fetch('https://dog.ceo/api/breeds/image/random');
                 const data = await response.json();
-                this.dogImage.push(data.message);
+                t
               }
             } catch (error) {
                 console.error('Error fetching dog image:', error);
