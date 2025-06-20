@@ -23,11 +23,8 @@
               <label for="password" class="form-label">Password</label><br>
               <input type="password" id="password" v-model="password" class="form-control" required/>
             </div>
-            <div class="error-message mb-3" v-if="errorMessage">
+            <div class="error-message mb-3" v-if="errorMessage" style="color: red;">
               {{ errorMessage }}
-            </div>
-            <div class="success-message mb-3" v-if="successMessage">
-              {{ successMessage }}
             </div>
             <button type="submit" class="btn btn-primary">
               Login
