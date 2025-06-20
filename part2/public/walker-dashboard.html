@@ -69,7 +69,9 @@
 
         async function applyToWalk(requestId) {
           try {
-            if
+            if (!user.value || !user.value.user_id) {
+              throw new Error('User information not loaded');
+            }
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
