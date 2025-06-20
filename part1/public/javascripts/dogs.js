@@ -3,7 +3,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return{
-            dogImage: ''
+            dogImage: '',
+            
         }
     },
     mounted(){
@@ -16,7 +17,7 @@ createApp({
                 const data = await response.json();
                 this.dogImage = data.message;
             } catch (error) {
-                this.dogImage = 'https://via.placeholder.com/400x300?text=Dog+Photo';
+
             }
         }
     }
