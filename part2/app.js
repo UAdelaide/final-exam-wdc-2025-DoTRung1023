@@ -20,7 +20,11 @@ app.use('/api/users', userRoutes);
 app.use(session({
     secret: process.env.SESSION_SECRET || '',
     resave: false,
-    saveUninitialized
+    saveUninitialized: false,
+    cookie: {
+        secure: false,
+        maxAge: 
+    }
 }));
 
 // Export the app instead of listening here
