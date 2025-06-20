@@ -53,3 +53,8 @@ CREATE TABLE WalkRatings (
     FOREIGN KEY (owner_id) REFERENCES Users(user_id),
     CONSTRAINT unique_rating_per_walk UNIQUE (request_id)
 );
+
+-- INSERT INTO Users (user_id, username, email, password_hash, role, created_at) VALUES
+-- (1, 'ownerJane', 'jane@example.com', 'hashedpassword123', 'owner', '2025-06-06 01:32:58'),
+-- (2, 'walkerMike', 'mike@example.com', 'hashedpassword456', 'walker', '2025-06-06 01:32:58'),
+-- (3, 'ownerBob', 'bob@example.com', 'hashedpassword789', 'owner', '2025-06-06 01:34:32');
