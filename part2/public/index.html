@@ -14,7 +14,7 @@
       <div class="col-md-6 col-lg-6">
           <h1 class="mb-4 text-primary">{{ message }}</h1>
           <!-- Login form -->
-          <form >
+          <form v-on:submit.prevent="login">
             <div class="username-input mb-3">
               <label for="username" class="form-label">Username</label><br>
               <input type="text" id="username" v-model="username" class="form-control" required/>
