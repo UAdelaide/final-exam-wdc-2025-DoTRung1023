@@ -18,17 +18,17 @@ router.get('/dogs', async function(req, res, next) {
 router.get('/walkrequests/open', async function(req, res, next) {
   try {
     const [rows] = await db.query(`
-      SELECT
+      select
         wr.request_id,
         d.name AS dog_name,
         wr.requested_time,
         wr.duration_minutes,
         wr.location,
         u.username AS owner_username
-      FROM WalkRequests wr
-      JOIN Dogs d ON wr.dog_id = d.dog_id
-      JOIN Users u ON d.owner_id = u.user_id
-      WHERE wr.status = 'open'
+      from WalkRequests wr
+      join Dogs d on wr.dog_id = d.dog_id
+      join Users u on d.owner_id = u.user_id
+      where wr.status = 'open'
       ORDER BY wr.requested_time
     `);
     res.json(rows);
@@ -44,8 +44,8 @@ router.get('/walkers/summary', async function(req, res, next) {
         u.username as walker_username,
         count(wr_ratings.rating) as total_ratings,
         case
-          when COUNT(wr_ratings.rating) > 0
-          then ROUND(AVG(wr_ratings.rating), 1)
+          when count(wr_ratings.rating) > 0
+          then round(avg(wr_ratings.rating), 1)
           else NULL
         end as average_rating,
         coalesce(count(distinct completed_walks.request_id), 0) as completed_walks
