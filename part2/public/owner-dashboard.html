@@ -126,6 +126,9 @@
               }
             });
             if (!res.ok) throw new Error('Failed to logout');
+            // Clear any local data
+            message.value = '';
+            error.value = '';
             window.location.href = '/';
           } catch (err) {
             error.value = err.message;
