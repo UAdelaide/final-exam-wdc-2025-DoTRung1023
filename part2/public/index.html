@@ -39,7 +39,6 @@
           password: '',
           currentUser: null,
           isLoggedIn: false,
-          isLoading: false,
           errorMessage: '',
           successMessage: ''
         };
@@ -63,7 +62,6 @@
           }
         },
         async login() {
-          this.isLoading = true;
           this.errorMessage = '';
           this.successMessage = '';
           try{
@@ -92,8 +90,6 @@
             }
           } catch(error) {
             this.errorMessage = 'Network error. Please try again.';
-          } finally {
-            this.isLoading = false;
           }
         },
         redirectBasedOnRole() {
