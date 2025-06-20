@@ -30,7 +30,12 @@
             </button>
           </form>
           <div class="dog-list">
-            <h2></h2>
+            <h2>All Registered Dogs</h2>
+            <ul>
+              <li v-for="dog in dogs" :key="dog.dog_id">
+                {{ dog.name }} - {{ dog.size }}
+              </li>
+            </ul>
           </div>
       </div>
     </div>
