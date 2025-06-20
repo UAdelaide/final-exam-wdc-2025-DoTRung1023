@@ -7,7 +7,7 @@ createApp({
             dogName: 'Buddy',
             dogBreed: 'Golden Retriver',
             dogAge: '3 years',
-            dogDescription: ''
+            dogDescription: 'A friendly and energetic dog who loves '
         }
     },
     mounted(){
