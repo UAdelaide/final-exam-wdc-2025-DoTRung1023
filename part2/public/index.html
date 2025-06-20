@@ -23,8 +23,8 @@
               <label for="password" class="form-label">Password</label><br>
               <input type="password" id="password" v-model="password" class="form-control" required/>
             </div>
-            <button type="submit" class="btn btn-primary" :disabled="isLoading">
-              {{ isLoading ? 'Logging in...' : 'Login' }}
+            <button type="submit" class="btn btn-primary">
+              Login
             </button>
           </form>
       </div>
@@ -43,7 +43,6 @@
           isLoggedIn: false,
           errorMessage: '',
           successMessage: '',
-          isLoading: false
         };
       },
       async mounted() {
@@ -65,7 +64,6 @@
           }
         },
         async login() {
-          this.isLoading = true;
           this.errorMessage = '';
           this.successMessage = '';
           try{
