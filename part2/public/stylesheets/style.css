@@ -154,9 +154,3 @@ textarea {
 section {
     display: none;
 }
-
-.logout-button {
-    border: solid 1px red;
-    background-color: white;
-    color:red;
-}
