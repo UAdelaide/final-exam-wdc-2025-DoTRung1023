@@ -20,7 +20,7 @@ createApp({
                 const data = await response.json();
                 this.dogImage = data.message;
             } catch (error) {
-                
+                console.error('Error fetching dog image:', error);
             }
         }
     }
