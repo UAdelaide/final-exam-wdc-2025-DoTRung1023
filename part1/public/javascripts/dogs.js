@@ -6,6 +6,9 @@ createApp({
             dogImage: ''
         }
     },
+    mounted(){
+        this.fetchNewDog();
+    },
     methods: {
         async fetchNewDog(){
 
