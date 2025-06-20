@@ -4,9 +4,9 @@ createApp({
     data() {
         return{
             dogImage: '',
-            dogName: '',
-            dogBreed: '',
-            dogAge: '',
+            dogName: 'Buddy',
+            dogBreed: 'Golden Retriver',
+            dogAge: '3 years',
             dogDescription: ''
         }
     },
