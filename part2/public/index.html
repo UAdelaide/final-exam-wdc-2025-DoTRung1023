@@ -83,7 +83,7 @@
               this.successMessage = result.message;
               this.currentUser = result.user;
               this.isLoggedIn = true;
-              
+              // Redirect based on user role
             } else{
               this.errorMessage = result.error || 'Login failed';
             }
