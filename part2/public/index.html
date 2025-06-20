@@ -43,7 +43,7 @@
           </thead>
           <tbody>
             <tr v-for="dog in dogs" :key="dog.dog_id">
-              <td style="width: 60px;">{{ (dog.dog_id == null) ? 'No Dog' : dog.dog_id }}</td>
+              <td style="width: 80px;">{{ (dog.dog_id == null) ? 'No Dog' : dog.dog_id }}</td>
               <td style="width: 30px;">{{ (dog.name == null) ? 'No Name' : dog.name }}</td>
               <td style="width: 50px;">{{ (dog.size == null) ? 'No Size' : dog.size }}</td>
               <td style="width: 50px;">{{ (dog.owner_id == null) ? 'No Owner' : dog.owner_id }}</td>
