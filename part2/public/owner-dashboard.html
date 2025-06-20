@@ -152,7 +152,8 @@
 
         async function checkAuth() {
           try {
-            const res
+            const res = await fetch('/api/users/me');
+            if
           } catch(err) {
             // Error checking auth - redirect to login page
             window.location.href = '/';
