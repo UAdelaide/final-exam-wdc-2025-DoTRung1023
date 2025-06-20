@@ -9,7 +9,7 @@
     font-size: 18px;
     padding: 5px 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 .logout-button:hover {
