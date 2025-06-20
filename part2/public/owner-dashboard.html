@@ -128,7 +128,7 @@
             if (!res.ok) throw new Error('Failed to logout');
             window.location.href = '/';
           } catch (err) {
-            
+            error.value = err.message;
           }
         }
 
@@ -141,7 +141,8 @@
           walks,
           message,
           error,
-          submitWalkRequest
+          submitWalkRequest,
+          logout
         };
       }
     }).mount('#app');
