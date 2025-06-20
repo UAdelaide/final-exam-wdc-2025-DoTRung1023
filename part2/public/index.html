@@ -85,7 +85,8 @@
               this.isLoggedIn = true;
               // Redirect based on user role
               setTimeout(() => {
-              this.redirectBasedOnRole();
+                this.redirectBasedOnRole();
+              }, 1000);
             } else{
               this.errorMessage = result.error || 'Login failed';
             }
