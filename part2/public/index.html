@@ -35,9 +35,9 @@
           <thead class="table-header">
             <tr>
               <th style="width: 80px;">Dog ID</th>
-              <th  style="width: 30px;">Name</th>
-              <th>Size</th>
-              <th>Owner ID</th>
+              <th style="width: 30px;">Name</th>
+              <th style="width: 50px;">Size</th>
+              <th style="width: 50px;">Owner ID</th>
               <th>Photo</th>
             </tr>
           </thead>
@@ -45,8 +45,8 @@
             <tr v-for="dog in dogs" :key="dog.dog_id">
               <td>{{ (dog.dog_id == null) ? 'No Dog' : dog.dog_id }}</td>
               <td>{{ (dog.name == null) ? 'No Name' : dog.name }}</td>
-              <td style="width: 50px;">{{ (dog.size == null) ? 'No Size' : dog.size }}</td>
-              <td style="width: 50px;">{{ (dog.owner_id == null) ? 'No Owner' : dog.owner_id }}</td>
+              <td>{{ (dog.size == null) ? 'No Size' : dog.size }}</td>
+              <td>{{ (dog.owner_id == null) ? 'No Owner' : dog.owner_id }}</td>
               <td><img :src="dog.photo" alt="Dog Photo" class="dog-photo"></td>
             </tr>
           </tbody>
