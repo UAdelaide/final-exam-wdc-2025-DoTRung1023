@@ -84,6 +84,7 @@
               this.currentUser = result.user;
               this.isLoggedIn = true;
               // Redirect based on user role
+              this.redirectBasedOnRole();
             } else{
               this.errorMessage = result.error || 'Login failed';
             }
@@ -92,6 +93,9 @@
           } finally {
             this.isLoading = false;
           }
+        },
+        redirectBasedOnRole() {
+          if(this.currentUser.role === 'owner')
         }
       }
     }).mount('#app');
