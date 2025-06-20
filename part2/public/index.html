@@ -29,23 +29,22 @@
               Login
             </button>
           </form>
-          <div class="dog-list">
-            <h2>All Registered Dogs</h2>
-            <table class="table table-striped"></table>
-              <thead class="table-header">
-                <tr>
-                  <th>Dog ID</th>
-                  <th>Name</th>
-                  <th>Size</th>
-                  <th>Owner ID</th>
-                  <th>Photo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="dog in dogs" :key="dog.dog_id"></tr>
-              </tbody>
-            </table>
-          </div>
+          <h2>All Registered Dogs</h2>
+          <table class="table table-striped"></table>
+            <thead class="table-header">
+              <tr>
+                <th>Dog ID</th>
+                <th>Name</th>
+                <th>Size</th>
+                <th>Owner ID</th>
+                <th>Photo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="dog in dogs" :key="dog.dog_id"></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
