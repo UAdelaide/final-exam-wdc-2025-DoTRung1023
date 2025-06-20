@@ -58,3 +58,10 @@ CREATE TABLE WalkRatings (
 -- (1, 'ownerJane', 'jane@example.com', 'hashedpassword123', 'owner', '2025-06-06 01:32:58'),
 -- (2, 'walkerMike', 'mike@example.com', 'hashedpassword456', 'walker', '2025-06-06 01:32:58'),
 -- (3, 'ownerBob', 'bob@example.com', 'hashedpassword789', 'owner', '2025-06-06 01:34:32');
+
+-- INSERT INTO Dogs (dog_id, owner_id, name, size) VALUES
+-- (1, 1, 'Buddy', 'medium'),
+-- (2, 1, 'Lucy', 'small'),
+-- (3, 3, 'Rocky', 'large'),
+-- (4, 3, 'Daisy', 'medium'),
+-- (5, 3, 'Milo', 'small');
