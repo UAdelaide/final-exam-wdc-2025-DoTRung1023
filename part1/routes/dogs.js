@@ -40,9 +40,9 @@ router.get('/walkrequests/open', async function(req, res, next) {
 router.get('/walkers/summary', async function(req, res, next) {
   try {
     const [rows] = await db.query(`
-      SELECT
-        u.username AS walker_username,
-        COALESCE(COUNT(wr_ratings.rating), 0) AS total_ratings,
+      select
+        u.username as walker_username,
+        COALESCE(COUNT(wr_ratings.rating), 0) as total_ratings,
         CASE
           WHEN COUNT(wr_ratings.rating) > 0
           THEN ROUND(AVG(wr_ratings.rating), 1)
