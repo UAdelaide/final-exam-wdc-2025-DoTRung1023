@@ -158,7 +158,11 @@
               window.location.href = '/';
               return;
             }
-            const user = await res.json()
+            const user = await res.json();
+            if(user.role !== 'owner') {
+              // User is logged in but not an owner - redirect to login page
+              
+            }
           } catch(err) {
             // Error checking auth - redirect to login page
             window.location.href = '/';
