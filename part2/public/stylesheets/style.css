@@ -154,3 +154,8 @@ textarea {
 section {
     display: none;
 }
+
+.dog-photo {
+    width: 10px;
+    height: 10px;
+}
