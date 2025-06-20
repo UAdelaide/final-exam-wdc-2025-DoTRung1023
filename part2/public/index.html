@@ -56,7 +56,8 @@
             if (response.ok) {
               this.currentUser = await response.json();
               this.isLoggedIn = true;
-              
+              // Automatically redirect if already logged in
+              this.redirectBasedOnRole();
             }
           } catch (error) {
             // User not logged in
