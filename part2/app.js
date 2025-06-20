@@ -12,9 +12,11 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // Session middleware
 app.use(session({
+    secret: process.env.SESSION_SECRET || 'fallback-secret-key-for-development',
     resave: false,
     saveUninitialized: false,
     cookie: {
+        secure: false, // Using HTTP
         maxAge: 60*60*1000 // 1 hour
     }
 }));
