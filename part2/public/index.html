@@ -59,6 +59,10 @@
               // Automatically redirect if already logged in
               this.redirectBasedOnRole();
             }
+            else {
+              this.isLoggedIn = false;
+              this.currentUser = null;
+            }
           } catch (error) {
             // User not logged in
             this.isLoggedIn = false;
