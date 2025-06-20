@@ -19,7 +19,8 @@ app.use('/api/users', userRoutes);
 // Session middleware
 app.use(session({
     secret: process.env.SESSION_SECRET || '',
-    
+    resave: false,
+    saveUninitialized
 }));
 
 // Export the app instead of listening here
