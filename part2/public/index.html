@@ -95,7 +95,9 @@
           }
         },
         redirectBasedOnRole() {
-          if(this.currentUser.role === 'owner')
+          if(this.currentUser.role === 'owner') {
+            window.location.href = '/owner-dashboard.html';
+          }
         }
       }
     }).mount('#app');
