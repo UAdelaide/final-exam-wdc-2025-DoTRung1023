@@ -160,6 +160,7 @@
         onMounted(async() => {
           // Check if user is logged in and has owner role
           await checkAuth();
+          await loadDogs();
           loadWalks();
         });
 
