@@ -5,7 +5,7 @@ const db = require('../models/db');
 router.get('/dogs', async function(req, res, next) {
   try {
     const [rows] = await db.query(`
-      select * from Dogs
+      select * from Users
     `);
     res.json(rows);
   } catch (error) {
