@@ -36,8 +36,12 @@
         return {
           message: 'Welcome to the Dog Walking Service!',
           username: '',
-          password: '',
+          password: ''
         };
+      },
+      async mounted() {
+        // Check if user is already logged in
+        await this.checkLoginStatus();
       },
       methods: {
       }
