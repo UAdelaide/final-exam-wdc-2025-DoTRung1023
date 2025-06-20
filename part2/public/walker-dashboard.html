@@ -112,7 +112,7 @@
               return;
             }
             const user = await res.json();
-            if(user.role !== 'owner') {
+            if(user.role !== 'walker') {
               // User is logged in but not an wlaker - redirect to login page
               window.location.href = '/';
               return;
