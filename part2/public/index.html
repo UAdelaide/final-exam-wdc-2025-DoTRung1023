@@ -40,7 +40,8 @@
           currentUser: null,
           isLoggedIn: false,
           errorMessage: '',
-          successMessage: ''
+          successMessage: '',
+          isLoading: false
         };
       },
       async mounted() {
@@ -62,6 +63,7 @@
           }
         },
         async login() {
+          this.isLoading = true;
           this.errorMessage = '';
           this.successMessage = '';
           try{
