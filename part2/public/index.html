@@ -24,7 +24,8 @@
               <input type="password" id="password" v-model="password" class="form-control" required/>
             </div>
             <button type="submit" class="btn btn-primary" :disabled="isLoading">
-              Login</button>
+              {{ isLoading ? 'Logging in...' : 'Login' }}
+            </button>
           </form>
       </div>
     </div>
