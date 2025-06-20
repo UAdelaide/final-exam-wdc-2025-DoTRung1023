@@ -46,7 +46,7 @@
       methods: {
         async checkLoginStatus() {
           try {
-            
+            const response = await fetch('/api/users/me');
           }
       }
     }).mount('#app');
