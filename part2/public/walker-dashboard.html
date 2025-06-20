@@ -76,6 +76,21 @@
           }
         }
 
+        async function logout() {
+          try {
+            const res = await fetch('/api/users/logout', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            });
+            if (!res.ok) throw new Error('Failed to logout');
+            window.location.href = '/';
+          } catch (err) {
+            error.value = err.message;
+          }
+        }
+        
         onMounted(() => {
           loadWalkRequests();
         });
