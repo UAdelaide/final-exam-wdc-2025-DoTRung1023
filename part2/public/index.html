@@ -132,7 +132,7 @@
           else {
             this.errorMessage = 'Unknown user role';
           }
-        }
+        },
         async loadDogs() {
           try {
             const response = await fetch('/api/dogs');
@@ -141,6 +141,15 @@
           } catch (error) {
             this.errorMessage = 'Failed to load dogs';
           }
+        },
+        async fetchNewDog(){
+            try {
+                const response = await fetch('https://dog.ceo/api/breeds/image/random');
+                const data = await response.json();
+                this.dogImage = data.message;
+            } catch (error) {
+                console.error('Error fetching dog image:', error);
+            }
         }
       }
     }).mount('#app');
