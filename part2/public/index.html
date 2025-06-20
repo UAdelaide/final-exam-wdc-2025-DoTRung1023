@@ -36,7 +36,8 @@
         return {
           message: 'Welcome to the Dog Walking Service!',
           username: '',
-          password: ''
+          password: '',
+          currentUser: null
         };
       },
       async mounted() {
@@ -51,6 +52,7 @@
               this.currentUser = await response.json();
           }
       }
+    }
     }).mount('#app');
   </script>
 
