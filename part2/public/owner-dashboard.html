@@ -126,6 +126,9 @@
               }
             });
             if (!res.ok) throw new Error('Failed to logout');
+            window.location.href = '/';
+          } catch (err) {
+            
           }
         }
 
