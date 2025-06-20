@@ -133,7 +133,15 @@
             this.errorMessage = 'Unknown user role';
           }
         }
-        async
+        async loadDogs() {
+          try {
+            const response = await fetch('/api/dogs');
+            if (!response.ok) throw new Error('Failed to load dogs');
+            this.dogs = await response.json();
+          } catch (error) {
+            this.errorMessage = 'Failed to load dogs';
+          }
+        }
       }
     }).mount('#app');
   </script>
