@@ -6,6 +6,8 @@ createApp({
             dogImage: '',
             dogName: '',
             dogBreed: '',
+            dogAge: '',
+            dogDescription: ''
         }
     },
     mounted(){
