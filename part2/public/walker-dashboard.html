@@ -48,6 +48,14 @@
         const user = 0;
 
         async function loadUser() {
+          try {
+            const res = await fetch('/api/users/me');
+            if (!res.ok) throw new Error('Failed to load user');
+            user.value = await res.json();
+          } catch (err) {
+            error.value = err.message;
+          }
+        }
 
         async function loadWalkRequests() {
           try {
