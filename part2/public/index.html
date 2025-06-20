@@ -37,7 +37,8 @@
           message: 'Welcome to the Dog Walking Service!',
           username: '',
           password: '',
-          currentUser: null
+          currentUser: null,
+          isLoggedIn: false
         };
       },
       async mounted() {
@@ -50,8 +51,11 @@
             const response = await fetch('/api/users/me');
             if (response.ok) {
               this.currentUser = await response.json();
+              this.isLoggedIn = true;
             }
           } catch (error) {
+            this.isLoggedIn = false;
+            
           }
         }
       }
