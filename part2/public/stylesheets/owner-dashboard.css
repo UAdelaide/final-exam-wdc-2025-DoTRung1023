@@ -6,4 +6,13 @@
     position: absolute;
     top: 40px;
     right: 40px;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: red;
+    color: white;
 }
