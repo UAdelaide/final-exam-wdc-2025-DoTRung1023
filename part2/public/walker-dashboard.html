@@ -110,6 +110,7 @@
         onMounted(async() => {
           // Check if user is logged in and has walker role
           await checkAuth();
+          await getCurrentUser();
           loadWalkRequests();
         });
 
