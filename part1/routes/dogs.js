@@ -43,12 +43,12 @@ router.get('/walkers/summary', async function(req, res, next) {
       select
         u.username as walker_username,
         COALESCE(COUNT(wr_ratings.rating), 0) as total_ratings,
-        CASE
-          WHEN COUNT(wr_ratings.rating) > 0
-          THEN ROUND(AVG(wr_ratings.rating), 1)
-          ELSE NULL
-        END AS average_rating,
-        COALESCE(COUNT(DISTINCT completed_walks.request_id), 0) AS completed_walks
+        case
+          when COUNT(wr_ratings.rating) > 0
+          then ROUND(AVG(wr_ratings.rating), 1)
+          else NULL
+        end as average_rating,
+        coalesce(count(distinct completed_walks.request_id), 0) as completed_walks
       FROM Users u
       LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id AND wa.status = 'accepted'
       LEFT JOIN WalkRequests completed_walks ON wa.request_id = completed_walks.request_id AND completed_walks.status = 'completed'
