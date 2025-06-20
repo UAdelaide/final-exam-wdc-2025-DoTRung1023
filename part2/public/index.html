@@ -50,10 +50,11 @@
             const response = await fetch('/api/users/me');
             if (response.ok) {
               this.currentUser = await response.json();
+            }
+          } catch (error) {
           }
         }
       }
-    }
     }).mount('#app');
   </script>
 
