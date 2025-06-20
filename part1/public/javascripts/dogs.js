@@ -3,8 +3,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return{
-            dogImage: '',
-        }
+            dogImage: ''
+        };
     },
     async mounted(){
         this.fetchNewDog();
