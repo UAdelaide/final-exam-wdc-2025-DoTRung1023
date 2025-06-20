@@ -10,7 +10,7 @@ createApp({
             dogDescription: 'A friendly and energetic dog who loves long walks and playing fetch.'
         }
     },
-    mounted(){
+    async mounted(){
         this.fetchNewDog();
     },
     methods: {
