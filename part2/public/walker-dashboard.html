@@ -47,7 +47,7 @@
         const error = ref('');
         const user = 0;
 
-        async function loadUser() {
+        async function getCurrentUser() {
           try {
             const res = await fetch('/api/users/me');
             if (!res.ok) throw new Error('Failed to load user');
