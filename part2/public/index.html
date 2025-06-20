@@ -54,8 +54,9 @@
               this.isLoggedIn = true;
             }
           } catch (error) {
+            // User not logged in
             this.isLoggedIn = false;
-            
+            this.currentUser = null;
           }
         }
       }
