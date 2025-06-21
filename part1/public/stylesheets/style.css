@@ -35,4 +35,15 @@ h2 {
   margin: 40px 0;
 }
 
-
+.dog-image {
+  width: 150px;
+  height: 150px;
+  border: 8px solid #ff00ff;
+  border-radius: 50%;
+  animation: shake 0.3s infinite, spin 3s linear infinite;
+  filter: hue-rotate(180deg) saturate(300%) contrast(200%);
+  position: absolute;
+  left: 60%;
+  top: 40%;
+  box-shadow: 0 0 20px #ff0000, 0 0 40px #00ff00, 0 0 60px #0000ff;
+}
