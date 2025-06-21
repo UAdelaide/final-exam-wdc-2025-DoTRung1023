@@ -3,6 +3,8 @@ body {
   font-family: 'Comic Neue', 'Creepster', 'Finger Paint', cursive;
   background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff0000);
   background-size: 400% 400%;
+  animation: rainbowBackground 2s ease-in-out infinite alternate;
+  color: #ff1493;
 }
 
 a {
