@@ -1,6 +1,8 @@
 body {
   padding: 5px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Comic Neue', 'Creepster', 'Finger Paint', cursive;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff0000);
+  background-size: 400% 400%;
 }
 
 a {
