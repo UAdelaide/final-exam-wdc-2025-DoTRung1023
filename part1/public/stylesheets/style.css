@@ -53,5 +53,13 @@ h2 {
   background-size: 400% 400%;
   animation: rainbowBackground 1s ease-in-out infinite alternate;
   color: #ffffff;
+  font-family: 'Comic Neue', cursive;
+  font-size: 8px;
+  font-weight: 700;
+  border: 3px dashed #ffff00;
+  border-radius: 0;
+  padding: 2px 4px;
+  cursor: pointer;
+  position: fixed;
   
 }
