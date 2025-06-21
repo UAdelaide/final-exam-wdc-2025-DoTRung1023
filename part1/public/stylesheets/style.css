@@ -12,3 +12,17 @@ a {
   color: #00B7FF;
 }
 
+h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 3.5em;
+  color: #ff0000;
+  text-align: center;
+  animation: shake 0.5s infinite, blink 0.3s infinite;
+  text-shadow: 5px 5px 0px #000000, 10px 10px 0px #ffffff;
+  transform: rotate(-5deg);
+  margin: 50px 0;
+  letter-spacing: 10px;
+}
+
+
+
