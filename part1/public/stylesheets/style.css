@@ -5,6 +5,8 @@ body {
   background-size: 400% 400%;
   animation: rainbowBackground 2s ease-in-out infinite alternate;
   color: #ff1493;
+  text-shadow: 2px 2px 4px #00ff00, -2px -2px 4px #0000ff;
+  overflow-x: hidden;
 }
 
 a {
