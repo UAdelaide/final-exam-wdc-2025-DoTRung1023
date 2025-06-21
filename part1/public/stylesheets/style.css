@@ -70,3 +70,11 @@ h2 {
   transform: rotate(-15deg);
   z-index: 1000;
 }
+
+.button:hover {
+  animation: shake 0.1s infinite, rainbowBackground 0.5s ease-in-out infinite;
+  transform: rotate(15deg) scale(0.8);
+  background: #ff0000;
+  color: #00ff00;
+  border-color: #0000ff;
+}
